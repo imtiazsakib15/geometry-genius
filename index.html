@@ -11,26 +11,239 @@
       <h1 class="text-4xl font-bold mt-6">Geometry Genius</h1>
 
       <!-- calculation part -->
-      <div class="p-5">
-        <div class="max-w-xs border-2 rounded-lg p-5 space-y-10">
-          <img class="mx-auto" src="./images/triangle.png" alt="triangle" />
+      <div
+        class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 p-5 mt-10 w-max mx-auto"
+      >
+        <!-- Triangle -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/triangle.png"
+            alt="triangle"
+          />
 
-          <div class="space-y-2">
+          <div class="space-y-3">
             <h4 class="text-2xl font-bold">Triangle</h4>
             <p>Area (A) = 0.5 X b X h</p>
-            <input class="bg-gray-200 w-16 p-1 rounded" type="number" placeholder="b" />
+            <input
+              id="triangle-base"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="b"
+            />
             <span>cm</span>
             <input
+              id="triangle-height"
               class="bg-gray-200 w-16 p-1 ms-5 rounded"
               type="number"
               placeholder="h"
             />
             <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="triangle-area"></span>cm<sup>2</sup>
+            </p>
           </div>
 
-          <button class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg">Calculate</button>
+          <button
+            onclick="calculateArea('triangle-base', 'triangle-height', 'triangle', 'triangle-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
+        </div>
+
+        <!-- Rectangle -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/rectangle.png"
+            alt="rectangle"
+          />
+
+          <div class="space-y-3">
+            <h4 class="text-2xl font-bold">Rectangle</h4>
+            <p>Area (A) = w X l</p>
+            <input
+              id="rectangle-width"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="w"
+            />
+            <span>cm</span>
+            <input
+              id="rectangle-length"
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="l"
+            />
+            <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="rectangle-area"></span>cm<sup>2</sup>
+            </p>
+          </div>
+
+          <button
+            onclick="calculateArea('rectangle-width', 'rectangle-length', 'rectangle', 'rectangle-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
+        </div>
+
+        <!-- Parallelogram -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/parallelogram.png"
+            alt="parallelogram"
+          />
+
+          <div class="space-y-3">
+            <h4 class="text-2xl font-bold">Parallelogram</h4>
+            <p>Area (A) = b X h</p>
+            <input
+              id="parallelogram-base"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="b"
+            />
+            <span>cm</span>
+            <input
+              id="parallelogram-height"
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="h"
+            />
+            <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="parallelogram-area"></span>cm<sup>2</sup>
+            </p>
+          </div>
+
+          <button
+            onclick="calculateArea('parallelogram-base', 'parallelogram-height', 'parallelogram', 'parallelogram-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
+        </div>
+
+        <!-- Rhombus -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/rhombus.png"
+            alt="rhombus"
+          />
+
+          <div class="space-y-3">
+            <h4 class="text-2xl font-bold">Rhombus</h4>
+            <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+            <input
+              id="rhombus-diagonal-1"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="d1"
+            />
+            <span>cm</span>
+            <input
+              id="rhombus-diagonal-2"
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="d2"
+            />
+            <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="rhombus-area"></span>cm<sup>2</sup>
+            </p>
+          </div>
+
+          <button
+            onclick="calculateArea('rhombus-diagonal-1', 'rhombus-diagonal-2', 'rhombus', 'rhombus-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
+        </div>
+
+        <!-- Pentagon -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/pentagon.png"
+            alt="pentagon"
+          />
+
+          <div class="space-y-3">
+            <h4 class="text-2xl font-bold">Pentagon</h4>
+            <p>Area (A) = 0.5 X p X b</p>
+            <input
+              id="pentagon-p"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="p"
+            />
+            <span>cm</span>
+            <input
+              id="pentagon-b"
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="b"
+            />
+            <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="pentagon-area"></span>cm<sup>2</sup>
+            </p>
+          </div>
+
+          <button
+            onclick="calculateArea('pentagon-p', 'pentagon-b', 'pentagon', 'pentagon-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
+        </div>
+
+        <!-- ellipse -->
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-6">
+          <img
+            class="mx-auto max-h-40"
+            src="./images/ellipse.png"
+            alt="ellipse"
+          />
+
+          <div class="space-y-3">
+            <h4 class="text-2xl font-bold">ellipse</h4>
+            <p>Area (A) = πab</p>
+            <input
+              id="ellipse-a"
+              class="bg-gray-200 w-16 p-1 rounded"
+              type="number"
+              placeholder="a"
+            />
+            <span>cm</span>
+            <input
+              id="ellipse-b"
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="b"
+            />
+            <span>cm</span>
+            <p class="font-medium">
+              Area: <span id="ellipse-area"></span>cm<sup>2</sup>
+            </p>
+          </div>
+
+          <button
+            onclick="calculateArea('ellipse-a', 'ellipse-b', 'ellipse', 'ellipse-area')"
+            class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg hover:scale-95"
+          >
+            Calculate Area
+          </button>
         </div>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
