@@ -6,5 +6,31 @@
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <main class="text-center">
+      <h1 class="text-4xl font-bold mt-6">Geometry Genius</h1>
+
+      <!-- calculation part -->
+      <div class="p-5">
+        <div class="max-w-xs border-2 rounded-lg p-5 space-y-10">
+          <img class="mx-auto" src="./images/triangle.png" alt="triangle" />
+
+          <div class="space-y-2">
+            <h4 class="text-2xl font-bold">Triangle</h4>
+            <p>Area (A) = 0.5 X b X h</p>
+            <input class="bg-gray-200 w-16 p-1 rounded" type="number" placeholder="b" />
+            <span>cm</span>
+            <input
+              class="bg-gray-200 w-16 p-1 ms-5 rounded"
+              type="number"
+              placeholder="h"
+            />
+            <span>cm</span>
+          </div>
+
+          <button class="w-full bg-blue-500 text-white font-semibold text-lg py-2 rounded-lg">Calculate</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
